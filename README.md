@@ -11,7 +11,7 @@ A comprehensive collection of beautiful and modern SVG icons specifically design
 <br/>
 <br/>
 <a href="https://es-icons.vercel.app/" target="_blank" rel="noopener noreferrer">
-  <strong>View full documentation on Storybook »</strong>
+  <strong>Browse the full icon gallery on Storybook »</strong>
 </a>
 <br/>
 <br/>
