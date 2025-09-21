@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import React, { useState } from 'react';
 import {
+  Ai,
   AndroidBold,
   ArrowCircleDown,
   ArrowCircleUp,
@@ -194,6 +195,7 @@ const IconShowcase = () => {
     { name: 'Pickture', component: Pickture },
     { name: 'Play', component: Play },
     { name: 'PlusFillCopy', component: PlusFillCopy },
+    { name: 'Ai', component: Ai },
     { name: 'AndroidBold', component: AndroidBold },
     { name: 'ArrowCircleDown', component: ArrowCircleDown },
     { name: 'ArrowCircleUp', component: ArrowCircleUp },
@@ -595,9 +597,9 @@ const IconShowcase = () => {
             fontSize: '0.9rem'
           }}
         >
-          <p style={{ margin: 0 }}>
-            ✨ Showcasing {icons.length} beautiful icons from ES Icons collection
-          </p>
+           <p style={{ margin: 0 }}>
+             ✨ Showcasing {icons.length} beautiful icons from Skenas Icons collection
+           </p>
         </div>
       </div>
     </div>

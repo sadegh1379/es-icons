@@ -1,3 +1,4 @@
+export { default as Ai } from './icons/ai';
 export { default as AndroidBold } from './icons/android-bold';
 export { default as ArrowCircleDown } from './icons/arrow-circle-down';
 export { default as ArrowCircleUp } from './icons/arrow-circle-up';
