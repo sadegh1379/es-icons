@@ -5,4 +5,4 @@
     "installCommand": "npm install",
     "framework": null,
     "outputDirectory": "./storybook-static"
-  }
+}
