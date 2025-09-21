@@ -3,9 +3,7 @@
 <img src="./assets/skenas.svg" alt="Skenas Icons" width="150" />
 <br/>
 <br/>
-<h1 align="center">@nikaat-crop/es-icons</h1>
 
-<br/>
 <p align="center">
 A comprehensive collection of beautiful and modern SVG icons specifically designed for **Skenas (اسکناس)** project, featuring **160+ carefully crafted financial and service icons** with full **TypeScript support**.
 <br/>
