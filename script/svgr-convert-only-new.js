@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const svgsDir = path.resolve('public/svgs');
-const outputDir = path.resolve('src/components/icons');
+const svgsDir = path.resolve('src/svgs');
+const outputDir = path.resolve('src/icons');
 
 const svgFiles = fs.readdirSync(svgsDir).filter(f => f.endsWith('.svg'));
 
