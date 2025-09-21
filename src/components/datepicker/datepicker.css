@@ -1,0 +1,34 @@
+:root {
+  --wd-datepicker-gap: 0.5rem; /* Space between datepicker elements */
+  --wd-datepicker-padding-bottom: 0; /* Padding at the bottom of the datepicker modal */
+  --wd-datepicker-text-align-rtl: right; /* Text alignment for RTL (Right-to-Left) mode */
+}
+
+.wd-datepicker-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: var(--wd-datepicker-padding-bottom);
+  gap: var(--wd-datepicker-gap);
+}
+
+.wd-datepicker-modal-content.wd-datepicker-rtl {
+  text-align: var(--wd-datepicker-text-align-rtl);
+}
+
+.wd-datepicker-wheels-container {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  gap: 8px;
+  width: 100%;
+}
+
+.wd-datepicker-wheel-container {
+  width: 100%;
+}
+
+.wd-datepicker-confirm-button {
+  width: 100%;
+}
