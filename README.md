@@ -1,6 +1,9 @@
 <br/>
 <div align="center">
-<img src="./assets/skenas.svg" alt="Skenas Icons" width="300" />
+<img src="./assets/skenas.svg" alt="Skenas Icons" width="200" />
+<br/>
+<br/>
+<br/>
 <h1 align="center">@nikaat-crop/es-icons</h1>
 
 <br/>
