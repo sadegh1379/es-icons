@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import {
   Ai,
   AndroidBold,
+  Arrow,
   ArrowCircleDown,
   ArrowCircleUp,
   ArrowTiny,
-  Arrow,
   Bale,
-  BankCard,
   Bank,
+  BankCard,
   Bill,
   BtcGradient,
   Buy,
@@ -19,15 +19,15 @@ import {
   Camera,
   Candlestick,
   CardByCard,
-  CategoryBankConversions,
   CategoryBank,
+  CategoryBankConversions,
   CategoryFinancial,
   CategoryInvestment,
   CategoryPractical,
   CategorySaiiadCheque,
   Chart,
-  CheckCircle,
   Check,
+  CheckCircle,
   Cheque,
   Chevron,
   CloseCircle,
@@ -36,10 +36,10 @@ import {
   Danger,
   DefectivePerson,
   Download,
-  EditSolid,
   Edit,
-  EskenasIcon,
+  EditSolid,
   Eskenas,
+  EskenasIcon,
   Exit,
   Eye,
   FilledBarChart,
@@ -58,9 +58,8 @@ import {
   Link,
   List,
   Magnifier,
-  MinusCopy,
-  MinusCircle,
   Minus,
+  MinusCircle,
   Moon,
   MyPhone,
   NationalCard,
@@ -70,13 +69,12 @@ import {
   NormalChart,
   Paper,
   Pencil,
-  PersonTwo,
   Person,
+  PersonTwo,
   Pickture,
   Play,
-  PlusFillCopy,
-  PlusFill,
   Plus,
+  PlusFill,
   Promissory,
   Question,
   Reload,
@@ -93,21 +91,21 @@ import {
   ServiceBankElectronicPromissoryNote,
   ServiceBankGetLoan,
   ServiceBankSaiiadCheckChainInquiryTransfers,
+  ServiceBankSaiiadCheque,
   ServiceBankSaiiadChequeBook,
   ServiceBankSaiiadChequeChainInquiryTransfers,
   ServiceBankSaiiadChequeCheckbook,
   ServiceBankSaiiadChequeInquiryId,
-  ServiceBankSaiiadCheque,
   ServiceBankSaiiadIdReceive,
   ServiceBankShahabCode,
   ServiceBankTransferMoney,
+  ServiceBill,
   ServiceBillElectricity,
   ServiceBillFixedLine,
   ServiceBillGas,
   ServiceBillMobile,
   ServiceBillPropertyTax,
   ServiceBillWater,
-  ServiceBill,
   ServiceChargeInternetCharge,
   ServiceChargeInternetInternet,
   ServiceInquiryBankTransfer,
@@ -121,6 +119,7 @@ import {
   ServiceInvestmentInstantPrice,
   ServiceInvestmentMarket,
   ServiceInvestmentStuckFund,
+  ServiceVehicleBike,
   ServiceVehicleBikeActiveLicensePlates,
   ServiceVehicleBikeAnnualVehicleTax,
   ServiceVehicleBikeBikeFinesInquiry,
@@ -137,7 +136,6 @@ import {
   ServiceVehicleBikeVehicleFinesInquiry,
   ServiceVehicleBikeVehicleHistoryInquiry,
   ServiceVehicleBikeVehicleTransferTax,
-  ServiceVehicleBike,
   ServiceVehicleLicenseStatus,
   Setting,
   Share,
@@ -152,15 +150,15 @@ import {
   ThreePerson,
   TradingView,
   Transactions,
-  TrashSolid,
   Trash,
+  TrashSolid,
   TrustWallet,
   TwoFa,
   Upload,
   User,
   Video,
-  WalletDark,
   Wallet,
+  WalletDark,
   Warning
 } from '../index';
 
@@ -185,25 +183,15 @@ const IconShowcase = () => {
   const [copiedIcon, setCopiedIcon] = useState('');
 
   const icons = [
-    { name: 'NoData', component: NoData },
-    { name: 'NoEye', component: NoEye },
-    { name: 'NormalChart', component: NormalChart },
-    { name: 'Paper', component: Paper },
-    { name: 'Pencil', component: Pencil },
-    { name: 'PersonTwo', component: PersonTwo },
-    { name: 'Person', component: Person },
-    { name: 'Pickture', component: Pickture },
-    { name: 'Play', component: Play },
-    { name: 'PlusFillCopy', component: PlusFillCopy },
     { name: 'Ai', component: Ai },
     { name: 'AndroidBold', component: AndroidBold },
+    { name: 'Arrow', component: Arrow },
     { name: 'ArrowCircleDown', component: ArrowCircleDown },
     { name: 'ArrowCircleUp', component: ArrowCircleUp },
     { name: 'ArrowTiny', component: ArrowTiny },
-    { name: 'Arrow', component: Arrow },
     { name: 'Bale', component: Bale },
-    { name: 'BankCard', component: BankCard },
     { name: 'Bank', component: Bank },
+    { name: 'BankCard', component: BankCard },
     { name: 'Bill', component: Bill },
     { name: 'BtcGradient', component: BtcGradient },
     { name: 'Buy', component: Buy },
@@ -213,15 +201,15 @@ const IconShowcase = () => {
     { name: 'Camera', component: Camera },
     { name: 'Candlestick', component: Candlestick },
     { name: 'CardByCard', component: CardByCard },
-    { name: 'CategoryBankConversions', component: CategoryBankConversions },
     { name: 'CategoryBank', component: CategoryBank },
+    { name: 'CategoryBankConversions', component: CategoryBankConversions },
     { name: 'CategoryFinancial', component: CategoryFinancial },
     { name: 'CategoryInvestment', component: CategoryInvestment },
     { name: 'CategoryPractical', component: CategoryPractical },
     { name: 'CategorySaiiadCheque', component: CategorySaiiadCheque },
     { name: 'Chart', component: Chart },
-    { name: 'CheckCircle', component: CheckCircle },
     { name: 'Check', component: Check },
+    { name: 'CheckCircle', component: CheckCircle },
     { name: 'Cheque', component: Cheque },
     { name: 'Chevron', component: Chevron },
     { name: 'CloseCircle', component: CloseCircle },
@@ -230,10 +218,10 @@ const IconShowcase = () => {
     { name: 'Danger', component: Danger },
     { name: 'DefectivePerson', component: DefectivePerson },
     { name: 'Download', component: Download },
-    { name: 'EditSolid', component: EditSolid },
     { name: 'Edit', component: Edit },
-    { name: 'EskenasIcon', component: EskenasIcon },
+    { name: 'EditSolid', component: EditSolid },
     { name: 'Eskenas', component: Eskenas },
+    { name: 'EskenasIcon', component: EskenasIcon },
     { name: 'Exit', component: Exit },
     { name: 'Eye', component: Eye },
     { name: 'FilledBarChart', component: FilledBarChart },
@@ -252,16 +240,23 @@ const IconShowcase = () => {
     { name: 'Link', component: Link },
     { name: 'List', component: List },
     { name: 'Magnifier', component: Magnifier },
-    { name: 'MinusCopy', component: MinusCopy },
-    { name: 'MinusCircle', component: MinusCircle },
     { name: 'Minus', component: Minus },
+    { name: 'MinusCircle', component: MinusCircle },
     { name: 'Moon', component: Moon },
     { name: 'MyPhone', component: MyPhone },
     { name: 'NationalCard', component: NationalCard },
     { name: 'NavArrow', component: NavArrow },
-   
-    { name: 'PlusFill', component: PlusFill },
+    { name: 'NoData', component: NoData },
+    { name: 'NoEye', component: NoEye },
+    { name: 'NormalChart', component: NormalChart },
+    { name: 'Paper', component: Paper },
+    { name: 'Pencil', component: Pencil },
+    { name: 'Person', component: Person },
+    { name: 'PersonTwo', component: PersonTwo },
+    { name: 'Pickture', component: Pickture },
+    { name: 'Play', component: Play },
     { name: 'Plus', component: Plus },
+    { name: 'PlusFill', component: PlusFill },
     { name: 'Promissory', component: Promissory },
     { name: 'Question', component: Question },
     { name: 'Reload', component: Reload },
@@ -277,22 +272,28 @@ const IconShowcase = () => {
     { name: 'ServiceBankDepositToIban', component: ServiceBankDepositToIban },
     { name: 'ServiceBankElectronicPromissoryNote', component: ServiceBankElectronicPromissoryNote },
     { name: 'ServiceBankGetLoan', component: ServiceBankGetLoan },
-    { name: 'ServiceBankSaiiadCheckChainInquiryTransfers', component: ServiceBankSaiiadCheckChainInquiryTransfers },
+    {
+      name: 'ServiceBankSaiiadCheckChainInquiryTransfers',
+      component: ServiceBankSaiiadCheckChainInquiryTransfers
+    },
+    { name: 'ServiceBankSaiiadCheque', component: ServiceBankSaiiadCheque },
     { name: 'ServiceBankSaiiadChequeBook', component: ServiceBankSaiiadChequeBook },
-    { name: 'ServiceBankSaiiadChequeChainInquiryTransfers', component: ServiceBankSaiiadChequeChainInquiryTransfers },
+    {
+      name: 'ServiceBankSaiiadChequeChainInquiryTransfers',
+      component: ServiceBankSaiiadChequeChainInquiryTransfers
+    },
     { name: 'ServiceBankSaiiadChequeCheckbook', component: ServiceBankSaiiadChequeCheckbook },
     { name: 'ServiceBankSaiiadChequeInquiryId', component: ServiceBankSaiiadChequeInquiryId },
-    { name: 'ServiceBankSaiiadCheque', component: ServiceBankSaiiadCheque },
     { name: 'ServiceBankSaiiadIdReceive', component: ServiceBankSaiiadIdReceive },
     { name: 'ServiceBankShahabCode', component: ServiceBankShahabCode },
     { name: 'ServiceBankTransferMoney', component: ServiceBankTransferMoney },
+    { name: 'ServiceBill', component: ServiceBill },
     { name: 'ServiceBillElectricity', component: ServiceBillElectricity },
     { name: 'ServiceBillFixedLine', component: ServiceBillFixedLine },
     { name: 'ServiceBillGas', component: ServiceBillGas },
     { name: 'ServiceBillMobile', component: ServiceBillMobile },
     { name: 'ServiceBillPropertyTax', component: ServiceBillPropertyTax },
     { name: 'ServiceBillWater', component: ServiceBillWater },
-    { name: 'ServiceBill', component: ServiceBill },
     { name: 'ServiceChargeInternetCharge', component: ServiceChargeInternetCharge },
     { name: 'ServiceChargeInternetInternet', component: ServiceChargeInternetInternet },
     { name: 'ServiceInquiryBankTransfer', component: ServiceInquiryBankTransfer },
@@ -306,23 +307,50 @@ const IconShowcase = () => {
     { name: 'ServiceInvestmentInstantPrice', component: ServiceInvestmentInstantPrice },
     { name: 'ServiceInvestmentMarket', component: ServiceInvestmentMarket },
     { name: 'ServiceInvestmentStuckFund', component: ServiceInvestmentStuckFund },
-    { name: 'ServiceVehicleBikeActiveLicensePlates', component: ServiceVehicleBikeActiveLicensePlates },
+    { name: 'ServiceVehicleBike', component: ServiceVehicleBike },
+    {
+      name: 'ServiceVehicleBikeActiveLicensePlates',
+      component: ServiceVehicleBikeActiveLicensePlates
+    },
     { name: 'ServiceVehicleBikeAnnualVehicleTax', component: ServiceVehicleBikeAnnualVehicleTax },
     { name: 'ServiceVehicleBikeBikeFinesInquiry', component: ServiceVehicleBikeBikeFinesInquiry },
     { name: 'ServiceVehicleBikeBikeTransferTax', component: ServiceVehicleBikeBikeTransferTax },
-    { name: 'ServiceVehicleBikeHighwayTollCharges', component: ServiceVehicleBikeHighwayTollCharges },
-    { name: 'ServiceVehicleBikeLicenseNegativeScore', component: ServiceVehicleBikeLicenseNegativeScore },
-    { name: 'ServiceVehicleBikeLicensePlateHistory', component: ServiceVehicleBikeLicensePlateHistory },
+    {
+      name: 'ServiceVehicleBikeHighwayTollCharges',
+      component: ServiceVehicleBikeHighwayTollCharges
+    },
+    {
+      name: 'ServiceVehicleBikeLicenseNegativeScore',
+      component: ServiceVehicleBikeLicenseNegativeScore
+    },
+    {
+      name: 'ServiceVehicleBikeLicensePlateHistory',
+      component: ServiceVehicleBikeLicensePlateHistory
+    },
     { name: 'ServiceVehicleBikeLicenseStatus', component: ServiceVehicleBikeLicenseStatus },
     { name: 'ServiceVehicleBikePlateHistory', component: ServiceVehicleBikePlateHistory },
-    { name: 'ServiceVehicleBikeTechnicalInspection', component: ServiceVehicleBikeTechnicalInspection },
-    { name: 'ServiceVehicleBikeThirdPartyInsuranceInquiry', component: ServiceVehicleBikeThirdPartyInsuranceInquiry },
+    {
+      name: 'ServiceVehicleBikeTechnicalInspection',
+      component: ServiceVehicleBikeTechnicalInspection
+    },
+    {
+      name: 'ServiceVehicleBikeThirdPartyInsuranceInquiry',
+      component: ServiceVehicleBikeThirdPartyInsuranceInquiry
+    },
     { name: 'ServiceVehicleBikeTrafficPlanPermit', component: ServiceVehicleBikeTrafficPlanPermit },
     { name: 'ServiceVehicleBikeVehicleDocuments', component: ServiceVehicleBikeVehicleDocuments },
-    { name: 'ServiceVehicleBikeVehicleFinesInquiry', component: ServiceVehicleBikeVehicleFinesInquiry },
-    { name: 'ServiceVehicleBikeVehicleHistoryInquiry', component: ServiceVehicleBikeVehicleHistoryInquiry },
-    { name: 'ServiceVehicleBikeVehicleTransferTax', component: ServiceVehicleBikeVehicleTransferTax },
-    { name: 'ServiceVehicleBike', component: ServiceVehicleBike },
+    {
+      name: 'ServiceVehicleBikeVehicleFinesInquiry',
+      component: ServiceVehicleBikeVehicleFinesInquiry
+    },
+    {
+      name: 'ServiceVehicleBikeVehicleHistoryInquiry',
+      component: ServiceVehicleBikeVehicleHistoryInquiry
+    },
+    {
+      name: 'ServiceVehicleBikeVehicleTransferTax',
+      component: ServiceVehicleBikeVehicleTransferTax
+    },
     { name: 'ServiceVehicleLicenseStatus', component: ServiceVehicleLicenseStatus },
     { name: 'Setting', component: Setting },
     { name: 'Share', component: Share },
@@ -337,15 +365,15 @@ const IconShowcase = () => {
     { name: 'ThreePerson', component: ThreePerson },
     { name: 'TradingView', component: TradingView },
     { name: 'Transactions', component: Transactions },
-    { name: 'TrashSolid', component: TrashSolid },
     { name: 'Trash', component: Trash },
+    { name: 'TrashSolid', component: TrashSolid },
     { name: 'TrustWallet', component: TrustWallet },
     { name: 'TwoFa', component: TwoFa },
     { name: 'Upload', component: Upload },
     { name: 'User', component: User },
     { name: 'Video', component: Video },
-    { name: 'WalletDark', component: WalletDark },
     { name: 'Wallet', component: Wallet },
+    { name: 'WalletDark', component: WalletDark },
     { name: 'Warning', component: Warning }
   ];
 
@@ -398,7 +426,6 @@ const IconShowcase = () => {
           >
             Skenas Icons Gallery
           </h1>
-        
         </div>
 
         {/* Search Bar */}
@@ -597,9 +624,9 @@ const IconShowcase = () => {
             fontSize: '0.9rem'
           }}
         >
-           <p style={{ margin: 0 }}>
-             ✨ Showcasing {icons.length} beautiful icons from Skenas Icons collection
-           </p>
+          <p style={{ margin: 0 }}>
+            ✨ Showcasing {icons.length} beautiful icons from Skenas Icons collection
+          </p>
         </div>
       </div>
     </div>
