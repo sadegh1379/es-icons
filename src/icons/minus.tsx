@@ -1,6 +1,9 @@
-import * as React from 'react';
 import type { SVGProps } from 'react';
-const SvgMinus = (props: SVGProps<SVGSVGElement>) => (
+
+const SvgMinus = (props: SVGProps<SVGSVGElement>) => {
+  console.log("loaded SvgMinus.")
+
+  return(
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -17,5 +20,5 @@ const SvgMinus = (props: SVGProps<SVGSVGElement>) => (
       d="M8 16h16"
     />
   </svg>
-);
+)};
 export default SvgMinus;

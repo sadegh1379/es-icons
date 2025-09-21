@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { PlusFill } from '../index';
 
 const meta: Meta = {
   title: 'Test/Empty',
@@ -11,5 +12,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Empty: Story = {
-  render: () => <div>Empty test story</div>
+  render: () => (<div>
+    <h1>icons</h1>
+    <PlusFill/>
+  </div>)
 };

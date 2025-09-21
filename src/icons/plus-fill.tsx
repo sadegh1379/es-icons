@@ -1,6 +1,8 @@
-import * as React from 'react';
 import type { SVGProps } from 'react';
-const SvgPlusFill = (props: SVGProps<SVGSVGElement>) => (
+
+const SvgPlusFill = (props: SVGProps<SVGSVGElement>) => {
+  console.log("loaded SvgPlusFill.")
+  return(
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -17,5 +19,5 @@ const SvgPlusFill = (props: SVGProps<SVGSVGElement>) => (
       d="M8 16h16m-8 8V8"
     />
   </svg>
-);
+)};
 export default SvgPlusFill;
