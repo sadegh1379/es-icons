@@ -1,6 +1,6 @@
 <br/>
 <div align="center">
-<img src="./assets/skenas.svg" alt="Skenas Icons" width="200" />
+<img src="./assets/skenas.svg" alt="Skenas Icons" width="100" />
 <br/>
 <br/>
 <br/>
