@@ -1,7 +1,7 @@
 {
   "name": "@nikaat-crop/es-icons",
   "version": "0.0.7",
-  "description": "A modern, customizable wheel datepicker component for React applications, offering intuitive date selection with a smooth scrolling interface.",
+  "description": "A comprehensive collection of beautiful and modern SVG icons specifically designed for Skenas (اسکناس) project, featuring 160+ carefully crafted financial and service icons with TypeScript support.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "author": "Buildix Team",
+  "author": "Skenas Team",
   "license": "ISC",
   "publishConfig": {
     "access": "public"
@@ -25,7 +25,6 @@
     "@storybook/jest": "^0.2.2",
     "@storybook/react-webpack5": "^9.0.18",
     "@storybook/testing-library": "^0.2.1",
-    "@types/moment-jalaali": "^0.7.9",
     "@types/react": "^18.3.3",
     "inquirer": "^8.2.6",
     "react": "^18.3.1",
@@ -43,19 +42,23 @@
   },
   "keywords": [
     "react",
-    "datepicker",
-    "wheel",
-    "date-picker",
-    "persian-wheel-picker",
-    "persian-datepicker",
-    "jalali-datepicker",
-    "wheel-datepicker",
-    "date",
-    "picker",
-    "scroll-picker"
+    "icons",
+    "svg",
+    "skenas",
+    "اسکناس",
+    "financial-icons",
+    "banking-icons",
+    "service-icons",
+    "react-icons",
+    "svg-icons",
+    "ui-icons",
+    "icon-pack",
+    "typescript",
+    "components",
+    "es-icons"
   ],
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   }
 }
