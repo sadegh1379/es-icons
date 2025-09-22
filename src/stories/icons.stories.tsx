@@ -385,7 +385,19 @@ const IconShowcase = () => {
     try {
       await navigator.clipboard.writeText(iconName);
       setCopiedIcon(iconName);
-      setTimeout(() => setCopiedIcon(''), 2000);
+      setTimeout(() => {
+        setCopiedIcon('');
+        // Reset any active border styling after copy animation
+        const elements = document.querySelectorAll('[data-icon-card]');
+        elements.forEach(el => {
+          const element = el as HTMLElement;
+          if (element.style.borderColor === 'rgb(102, 126, 234)') {
+            element.style.borderColor = '#e2e8f0';
+            element.style.transform = 'scale(1)';
+            element.style.boxShadow = 'none';
+          }
+        });
+      }, 2000);
     } catch (err) {
       console.error('Failed to copy: ', err);
     }
@@ -411,23 +423,6 @@ const IconShowcase = () => {
           backdropFilter: 'blur(10px)'
         }}
       >
-        {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <h1
-            style={{
-              fontSize: '3rem',
-              fontWeight: '700',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              margin: '0 0 16px 0'
-            }}
-          >
-            Skenas Icons Gallery
-          </h1>
-        </div>
-
         {/* Search Bar */}
         <div
           style={{
@@ -481,8 +476,8 @@ const IconShowcase = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '24px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+            gap: '18px',
             marginBottom: '40px'
           }}
         >
@@ -492,6 +487,7 @@ const IconShowcase = () => {
             return (
               <div
                 key={index}
+                data-icon-card
                 onClick={() => copyIconName(icon.name)}
                 style={{
                   background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',
@@ -545,25 +541,25 @@ const IconShowcase = () => {
                 {/* Icon */}
                 <div
                   style={{
-                    width: '80px',
-                    height: '80px',
+                    width: '50px',
+                    height: '50px',
                     margin: '0 auto 20px auto',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                    borderRadius: '20px',
+                    borderRadius: '10px',
                     color: 'white',
                     boxShadow: '0 8px 25px rgba(102, 126, 234, 0.3)'
                   }}
                 >
-                  <IconComponent style={{ width: '40px', height: '40px' }} />
+                  <IconComponent style={{ width: '30px', height: '30px' }} />
                 </div>
 
                 {/* Icon Name */}
                 <h3
                   style={{
-                    fontSize: '1.25rem',
+                    fontSize: '1rem',
                     fontWeight: '600',
                     color: '#1f2937',
                     margin: '0'
@@ -633,6 +629,6 @@ const IconShowcase = () => {
   );
 };
 
-export const IconGallery: Story = {
+export const SkenasIconGallery: Story = {
   render: () => <IconShowcase />
 };
