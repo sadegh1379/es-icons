@@ -158,16 +158,6 @@ Once everything looks good, publish the updated package:
 npm run release
 ```
 
-### 📋 Checklist
-Before submitting your icon, make sure:
-
-- [ ] SVG is 24×24 pixels
-- [ ] Colors use `#000` for customizable elements  
-- [ ] SVG is clean and optimized
-- [ ] Icon displays correctly in Storybook
-- [ ] Colors can be changed via props
-- [ ] Icon name follows PascalCase convention
-
 ## 🎨 Icon Props
 
 All icons accept standard SVG props:
