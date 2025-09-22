@@ -4,6 +4,9 @@ const preview: Preview = {
   // tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
+    options: {
+      bottomPanelHeight: 0
+    },
     controls: {
       matchers: {
        color: /(background|color)$/i,

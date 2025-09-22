@@ -166,10 +166,13 @@ const meta: Meta = {
   title: 'Icons',
   parameters: {
     layout: 'fullscreen',
-    controls: { disable: true },
-    actions: { disable: true },
-    interactions: { disable: true },
-    toolbar: { disable: true },
+    controls: {
+      disable: true,
+    },
+    actions: {
+      disable: true,
+    },
+
     docs: {
       story: {
         inline: false,
