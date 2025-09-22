@@ -167,6 +167,8 @@ const meta: Meta = {
   parameters: {
     layout: 'fullscreen',
     controls: { disable: true },
+    actions: { disable: true },
+    interactions: { disable: true },
     docs: {
       story: {
         inline: false,
