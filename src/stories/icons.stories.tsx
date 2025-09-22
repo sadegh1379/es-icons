@@ -169,6 +169,7 @@ const meta: Meta = {
     controls: { disable: true },
     actions: { disable: true },
     interactions: { disable: true },
+    toolbar: { disable: true },
     docs: {
       story: {
         inline: false,
