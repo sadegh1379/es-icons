@@ -166,6 +166,7 @@ const meta: Meta = {
   title: 'Icons',
   parameters: {
     layout: 'fullscreen',
+    controls: { disable: true },
     docs: {
       story: {
         inline: false,
