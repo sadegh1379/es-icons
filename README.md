@@ -16,7 +16,7 @@ A comprehensive collection of beautiful and modern SVG icons specifically design
 </p>
 </div>
 
-## 📸 Preview
+## 📸 Demo
 
 <div align="center">
   <img src="./assets/preview.png" alt="ES Icons Preview" width="100%" />
@@ -93,6 +93,80 @@ import * as Icons from '@nikaat-crop/es-icons';
 ```
 
 And many more! Check out the [full documentation](https://es-icons.vercel.app/) for a complete list.
+
+## ➕ Adding New Icons
+
+Want to contribute a new icon to the collection? Follow these simple steps:
+
+### Step 1: Prepare Your SVG
+1. Place your SVG file in the `src/svgs/` directory
+2. **Important guidelines:**
+   - Set the icon size to **24×24 pixels**
+   - Use `#000` (black) for colors that should be customizable from outside
+   - Ensure the SVG is optimized and clean
+
+```xml
+<!-- ✅ Good example -->
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z" fill="#000"/>
+</svg>
+
+<!-- ❌ Avoid fixed colors if you want them to be customizable -->
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z" fill="#3B82F6"/>
+</svg>
+```
+
+### Step 2: Generate React Component
+Run the icon generation script to automatically create the React component:
+
+```bash
+npm run icons:generate
+```
+
+This command will:
+- Convert your SVG to a React component using SVGR
+- Add TypeScript definitions
+- Update the main exports in `src/index.ts`
+
+### Step 3: Update Storybook
+Add your new icon to the Storybook gallery by importing it in `src/stories/icons.stories.tsx`:
+
+```tsx
+// Add your import
+import { YourNewIcon } from '../index';
+
+// Add to the icons array
+const icons = [
+  // ... existing icons
+  { name: 'YourNewIcon', component: YourNewIcon },
+];
+```
+
+### Step 4: Test Your Icon
+1. Start Storybook to preview your icon:
+   ```bash
+   npm run storybook
+   ```
+2. Verify that your icon displays correctly
+3. Test that colors can be customized via props
+
+### Step 5: Publish (For Maintainers)
+Once everything looks good, publish the updated package:
+
+```bash
+npm run release
+```
+
+### 📋 Checklist
+Before submitting your icon, make sure:
+
+- [ ] SVG is 24×24 pixels
+- [ ] Colors use `#000` for customizable elements  
+- [ ] SVG is clean and optimized
+- [ ] Icon displays correctly in Storybook
+- [ ] Colors can be changed via props
+- [ ] Icon name follows PascalCase convention
 
 ## 🎨 Icon Props
 
