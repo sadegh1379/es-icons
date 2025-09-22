@@ -482,8 +482,8 @@ const IconShowcase = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-            gap: '18px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '20px',
             marginBottom: '40px'
           }}
         >
@@ -499,7 +499,7 @@ const IconShowcase = () => {
                   background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',
                   border: `1px solid #e2e8f0`,
                   borderRadius: '20px',
-                  padding: '32px 24px',
+                  padding: '28px 20px 32px 20px',
                   textAlign: 'center',
                   transition: 'all 0.3s ease',
                   cursor: 'pointer',
@@ -568,7 +568,15 @@ const IconShowcase = () => {
                     fontSize: '1rem',
                     fontWeight: '600',
                     color: '#1f2937',
-                    margin: '0'
+                    margin: '0',
+                    wordBreak: 'break-word',
+                    hyphens: 'auto',
+                    lineHeight: '1.3',
+                    minHeight: '2.6rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center'
                   }}
                 >
                   {icon.name}
