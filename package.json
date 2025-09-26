@@ -1,6 +1,6 @@
 {
   "name": "@nikaat-crop/es-icons",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A comprehensive collection of beautiful and modern SVG icons specifically designed for Skenas (اسکناس) project, featuring 160+ carefully crafted financial and service icons with TypeScript support.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
