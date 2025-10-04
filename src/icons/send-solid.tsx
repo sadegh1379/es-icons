@@ -7,7 +7,7 @@ const SvgSendSolid = (props: SVGProps<SVGSVGElement>) => (
     height="1em"
     fill="none"
     viewBox="0 0 22 22"
-    transform="rotate(180 11 11)"
+    transform="rotate(180)"
     {...props}
   >
     <path
