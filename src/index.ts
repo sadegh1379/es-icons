@@ -167,3 +167,4 @@ export { default as WalletDark } from './icons/wallet-dark';
 export { default as WalletFill } from './icons/wallet-fill';
 export { default as Wallet } from './icons/wallet';
 export { default as Warning } from './icons/warning';
+export { default as SendSolid } from './icons/send-solid';

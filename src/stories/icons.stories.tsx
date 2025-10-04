@@ -88,6 +88,7 @@ import {
   Rules,
   Scanner,
   Sell,
+  SendSolid,
   ServiceBankBalance,
   ServiceBankCardToDeposit,
   ServiceBankCardToIban,
@@ -401,6 +402,7 @@ const IconShowcase = () => {
     { name: 'WalletDark', component: WalletDark },
     { name: 'WalletFill', component: WalletFill },
     { name: 'Warning', component: Warning },
+    { name: 'SendSolid', component: SendSolid },
     
   ];
 
