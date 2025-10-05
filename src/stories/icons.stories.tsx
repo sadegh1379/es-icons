@@ -7,6 +7,9 @@ import {
   ArrowCircleDown,
   ArrowCircleUp,
   ArrowCircleUpFill,
+  ArrowCircleLeftFill,
+  ArrowCircleRightFill,
+  ArrowCircleDownFill,
   ArrowTiny,
   Bale,
   Bank,
@@ -404,7 +407,10 @@ const IconShowcase = () => {
     { name: 'WalletFill', component: WalletFill },
     { name: 'Warning', component: Warning },
     { name: 'SendSolid', component: SendSolid },
-    {name: 'ArrowCircleUpFill', component: ArrowCircleUpFill}
+    {name: 'ArrowCircleUpFill', component: ArrowCircleUpFill},
+    {name: 'ArrowCircleLeftFill', component: ArrowCircleLeftFill},
+    {name: 'ArrowCircleRightFill', component: ArrowCircleRightFill},
+    {name: 'ArrowCircleDownFill', component: ArrowCircleDownFill}
   ];
 
   const filteredIcons = icons.filter(icon =>

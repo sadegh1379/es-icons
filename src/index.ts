@@ -169,3 +169,6 @@ export { default as Wallet } from './icons/wallet';
 export { default as Warning } from './icons/warning';
 export { default as SendSolid } from './icons/send-solid';
 export { default as ArrowCircleUpFill } from './icons/arrow-circle-up-fill';
+export { default as ArrowCircleLeftFill } from './icons/arrow-circle-left-fill';
+export { default as ArrowCircleRightFill } from './icons/arrow-circle-right-fill';
+export { default as ArrowCircleDownFill } from './icons/arrow-circle-down-fill';
