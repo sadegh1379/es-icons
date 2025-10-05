@@ -6,6 +6,7 @@ import {
   Arrow,
   ArrowCircleDown,
   ArrowCircleUp,
+  ArrowCircleUpFill,
   ArrowTiny,
   Bale,
   Bank,
@@ -403,7 +404,7 @@ const IconShowcase = () => {
     { name: 'WalletFill', component: WalletFill },
     { name: 'Warning', component: Warning },
     { name: 'SendSolid', component: SendSolid },
-    
+    {name: 'ArrowCircleUpFill', component: ArrowCircleUpFill}
   ];
 
   const filteredIcons = icons.filter(icon =>
