@@ -174,7 +174,8 @@ import {
   Wallet,
   WalletDark,
   WalletFill,
-  Warning
+  Warning,
+  TransferCircleFill
 } from '../index';
 
 const meta: Meta = {
@@ -410,7 +411,8 @@ const IconShowcase = () => {
     {name: 'ArrowCircleUpFill', component: ArrowCircleUpFill},
     {name: 'ArrowCircleLeftFill', component: ArrowCircleLeftFill},
     {name: 'ArrowCircleRightFill', component: ArrowCircleRightFill},
-    {name: 'ArrowCircleDownFill', component: ArrowCircleDownFill}
+    {name: 'ArrowCircleDownFill', component: ArrowCircleDownFill},
+    {name: 'TransferCircleFill', component: TransferCircleFill},
   ];
 
   const filteredIcons = icons.filter(icon =>
