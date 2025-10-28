@@ -173,3 +173,4 @@ export { default as ArrowCircleLeftFill } from './icons/arrow-circle-left-fill';
 export { default as ArrowCircleRightFill } from './icons/arrow-circle-right-fill';
 export { default as ArrowCircleDownFill } from './icons/arrow-circle-down-fill';
 export { default as TransferCircleFill } from './icons/transfer-circle-fill';
+export { default as ExportSolid } from './icons/export-solid';
