@@ -1,5 +1,7 @@
 const { execSync } = require('child_process');
 const inquirer = require('inquirer');
+const fs = require('fs');
+const path = require('path');
 
 async function runRelease() {
   try {
@@ -17,6 +19,13 @@ async function runRelease() {
 
     console.log(`Running npm version ${versionType}...`);
     execSync(`npm version ${versionType}`, { stdio: 'inherit' });
+
+    // Ensure a clean build by removing the dist directory before building
+    const distPath = path.join(__dirname, 'dist');
+    if (fs.existsSync(distPath)) {
+      console.log('Removing existing dist directory...');
+      fs.rmSync(distPath, { recursive: true, force: true });
+    }
 
     console.log('Building project...');
     execSync('rollup -c --bundleConfigAsCjs', { stdio: 'inherit' });
