@@ -176,7 +176,8 @@ import {
   WalletFill,
   Warning,
   TransferCircleFill,
-  ExportSolid
+  ExportSolid,
+  InfoCircleSolid
 } from '../index';
 
 const meta: Meta = {
@@ -415,6 +416,7 @@ const IconShowcase = () => {
     {name: 'ArrowCircleDownFill', component: ArrowCircleDownFill},
     {name: 'TransferCircleFill', component: TransferCircleFill},
     {name: 'ExportSolid', component: ExportSolid},
+    {name: "InfoCircleSolid", component: InfoCircleSolid}
   ];
 
   const filteredIcons = icons.filter(icon =>
