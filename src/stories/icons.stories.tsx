@@ -55,7 +55,6 @@ import {
   GoldStar,
   HamrahAval,
   HandPointer,
-  History,
   Home,
   Info,
   Inquiry,
@@ -86,7 +85,6 @@ import {
   Promissory,
   Question,
   Receive,
-  Reload,
   Reward,
   Rightel,
   Rules,
@@ -177,7 +175,9 @@ import {
   Warning,
   TransferCircleFill,
   ExportSolid,
-  InfoCircleSolid
+  InfoCircleSolid,
+  HistorySolid,
+  ReloadSolid
 } from '../index';
 
 const meta: Meta = {
@@ -257,7 +257,6 @@ const IconShowcase = () => {
     { name: 'GoldStar', component: GoldStar },
     { name: 'HamrahAval', component: HamrahAval },
     { name: 'HandPointer', component: HandPointer },
-    { name: 'History', component: History },
     { name: 'Home', component: Home },
     { name: 'Info', component: Info },
     { name: 'Inquiry', component: Inquiry },
@@ -288,7 +287,6 @@ const IconShowcase = () => {
     { name: 'Promissory', component: Promissory },
     { name: 'Question', component: Question },
     { name: 'Receive', component: Receive },
-    { name: 'Reload', component: Reload },
     { name: 'Reward', component: Reward },
     { name: 'Rightel', component: Rightel },
     { name: 'Rules', component: Rules },
@@ -416,7 +414,9 @@ const IconShowcase = () => {
     {name: 'ArrowCircleDownFill', component: ArrowCircleDownFill},
     {name: 'TransferCircleFill', component: TransferCircleFill},
     {name: 'ExportSolid', component: ExportSolid},
-    {name: "InfoCircleSolid", component: InfoCircleSolid}
+    {name: "InfoCircleSolid", component: InfoCircleSolid},
+    {name: "HistorySolid", component: HistorySolid},
+    {name: "ReloadSolid", component: ReloadSolid}
   ];
 
   const filteredIcons = icons.filter(icon =>
