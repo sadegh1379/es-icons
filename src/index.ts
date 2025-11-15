@@ -175,3 +175,5 @@ export { default as ExportSolid } from './icons/export-solid';
 export { default as InfoCircleSolid } from './icons/info-circle-solid';
 export { default as HistorySolid } from './icons/history-solid';
 export { default as ReloadSolid } from './icons/reload-solid';
+export { default as GoldSilverFillColored } from './icons/gold-silver-fill-colored';
+

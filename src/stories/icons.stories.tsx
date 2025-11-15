@@ -177,7 +177,8 @@ import {
   ExportSolid,
   InfoCircleSolid,
   HistorySolid,
-  ReloadSolid
+  ReloadSolid,
+  GoldSilverFillColored
 } from '../index';
 
 const meta: Meta = {
@@ -416,7 +417,8 @@ const IconShowcase = () => {
     {name: 'ExportSolid', component: ExportSolid},
     {name: "InfoCircleSolid", component: InfoCircleSolid},
     {name: "HistorySolid", component: HistorySolid},
-    {name: "ReloadSolid", component: ReloadSolid}
+    {name: "ReloadSolid", component: ReloadSolid},
+    {name: "GoldSilverFillColored", component: GoldSilverFillColored}
   ];
 
   const filteredIcons = icons.filter(icon =>
