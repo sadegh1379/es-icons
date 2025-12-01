@@ -178,7 +178,11 @@ import {
   InfoCircleSolid,
   HistorySolid,
   ReloadSolid,
-  GoldSilverFillColored
+  GoldSilverFillColored,
+  BarChartTrendSolid,
+  DocumentTimeSolid,
+  ShieldCheckSolid,
+  CheckCircleSolid
 } from '../index';
 
 const meta: Meta = {
@@ -418,7 +422,12 @@ const IconShowcase = () => {
     {name: "InfoCircleSolid", component: InfoCircleSolid},
     {name: "HistorySolid", component: HistorySolid},
     {name: "ReloadSolid", component: ReloadSolid},
-    {name: "GoldSilverFillColored", component: GoldSilverFillColored}
+    {name: "GoldSilverFillColored", component: GoldSilverFillColored},
+    {name: "BarChartTrendSolid", component: BarChartTrendSolid},
+    {name: "DocumentTimeSolid", component: DocumentTimeSolid},
+    {name: "ShieldCheckSolid", component: ShieldCheckSolid},
+    {name: "CheckCircleSolid", component: CheckCircleSolid},
+    
   ];
 
   const filteredIcons = icons.filter(icon =>

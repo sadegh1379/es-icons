@@ -176,4 +176,8 @@ export { default as InfoCircleSolid } from './icons/info-circle-solid';
 export { default as HistorySolid } from './icons/history-solid';
 export { default as ReloadSolid } from './icons/reload-solid';
 export { default as GoldSilverFillColored } from './icons/gold-silver-fill-colored';
+export { default as BarChartTrendSolid } from './icons/bar-chart-trend-solid';
+export { default as ShieldCheckSolid } from './icons/shield-check-solid';
+export { default as DocumentTimeSolid } from './icons/document-time-solid';
+export { default as CheckCircleSolid } from './icons/check-circle-solid';
 
