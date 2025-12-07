@@ -182,7 +182,12 @@ import {
   BarChartTrendSolid,
   DocumentTimeSolid,
   ShieldCheckSolid,
-  CheckCircleSolid
+  CheckCircleSolid,
+  CameraFillColored,
+  CheckCircleFillColored,
+  CloseCircleFillColored,
+  MicrophoneFillColored,
+  PlayFill
 } from '../index';
 
 const meta: Meta = {
@@ -427,6 +432,11 @@ const IconShowcase = () => {
     {name: "DocumentTimeSolid", component: DocumentTimeSolid},
     {name: "ShieldCheckSolid", component: ShieldCheckSolid},
     {name: "CheckCircleSolid", component: CheckCircleSolid},
+    {name: "CameraFillColored", component: CameraFillColored},
+    {name: "CheckCircleFillColored", component: CheckCircleFillColored},
+    {name: "CloseCircleFillColored", component: CloseCircleFillColored},
+    {name: "MicrophoneFillColored", component: MicrophoneFillColored},
+    {name: "PlayFill", component: PlayFill},
     
   ];
 

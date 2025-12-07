@@ -180,4 +180,9 @@ export { default as BarChartTrendSolid } from './icons/bar-chart-trend-solid';
 export { default as ShieldCheckSolid } from './icons/shield-check-solid';
 export { default as DocumentTimeSolid } from './icons/document-time-solid';
 export { default as CheckCircleSolid } from './icons/check-circle-solid';
+export { default as CameraFillColored } from './icons/camera-fill-colored';
+export { default as CheckCircleFillColored } from './icons/check-circle-fill-colored';
+export { default as CloseCircleFillColored } from './icons/close-circle-fill-colored';
+export { default as MicrophoneFillColored } from './icons/microphone-fill-colored';
+export { default as PlayFill } from './icons/play-fill';
 
