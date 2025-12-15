@@ -187,7 +187,8 @@ import {
   CheckCircleFillColored,
   CloseCircleFillColored,
   MicrophoneFillColored,
-  PlayFill
+  PlayFill,
+  ShieldStarFill
 } from '../index';
 
 const meta: Meta = {
@@ -437,6 +438,7 @@ const IconShowcase = () => {
     {name: "CloseCircleFillColored", component: CloseCircleFillColored},
     {name: "MicrophoneFillColored", component: MicrophoneFillColored},
     {name: "PlayFill", component: PlayFill},
+    {name: "ShieldStarFill", component: ShieldStarFill},
     
   ];
 

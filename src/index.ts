@@ -185,4 +185,6 @@ export { default as CheckCircleFillColored } from './icons/check-circle-fill-col
 export { default as CloseCircleFillColored } from './icons/close-circle-fill-colored';
 export { default as MicrophoneFillColored } from './icons/microphone-fill-colored';
 export { default as PlayFill } from './icons/play-fill';
+export { default as ShieldStarFill } from './icons/shield-star-fill';
+
 
