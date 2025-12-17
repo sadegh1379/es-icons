@@ -70,7 +70,6 @@ export { default as Paper } from './icons/paper';
 export { default as Pencil } from './icons/pencil';
 export { default as PersonTwo } from './icons/person-two';
 export { default as Person } from './icons/person';
-export { default as Pickture } from './icons/pickture';
 export { default as Play } from './icons/play';
 export { default as PlusCircle } from './icons/plus-circle';
 export { default as PlusFill } from './icons/plus-fill';
@@ -186,5 +185,7 @@ export { default as CloseCircleFillColored } from './icons/close-circle-fill-col
 export { default as MicrophoneFillColored } from './icons/microphone-fill-colored';
 export { default as PlayFill } from './icons/play-fill';
 export { default as ShieldStarFill } from './icons/shield-star-fill';
+export { default as ServiceInvestmentSpecialInvestmentPlans } from './icons/ServiceInvestmentSpecialInvestmentPlans';
+export { default as ImageSolid } from './icons/image-solid'
 
 

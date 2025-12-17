@@ -77,7 +77,6 @@ import {
   Pencil,
   Person,
   PersonTwo,
-  Pickture,
   Play,
   Plus,
   PlusCircle,
@@ -188,7 +187,9 @@ import {
   CloseCircleFillColored,
   MicrophoneFillColored,
   PlayFill,
-  ShieldStarFill
+  ShieldStarFill,
+  ServiceInvestmentSpecialInvestmentPlans,
+  ImageSolid
 } from '../index';
 
 const meta: Meta = {
@@ -290,7 +291,6 @@ const IconShowcase = () => {
     { name: 'Pencil', component: Pencil },
     { name: 'Person', component: Person },
     { name: 'PersonTwo', component: PersonTwo },
-    { name: 'Pickture', component: Pickture },
     { name: 'Play', component: Play },
     { name: 'Plus', component: Plus },
     { name: 'PlusCircle', component: PlusCircle },
@@ -369,6 +369,7 @@ const IconShowcase = () => {
     },
     { name: 'ServiceVehicleBikeLicenseStatus', component: ServiceVehicleBikeLicenseStatus },
     { name: 'ServiceVehicleBikePlateHistory', component: ServiceVehicleBikePlateHistory },
+    { name: 'ServiceInvestmentSpecialInvestmentPlans', component: ServiceInvestmentSpecialInvestmentPlans },
     {
       name: 'ServiceVehicleBikeTechnicalInspection',
       component: ServiceVehicleBikeTechnicalInspection
@@ -439,6 +440,7 @@ const IconShowcase = () => {
     {name: "MicrophoneFillColored", component: MicrophoneFillColored},
     {name: "PlayFill", component: PlayFill},
     {name: "ShieldStarFill", component: ShieldStarFill},
+    {name: "ImageSolid", component: ImageSolid}
     
   ];
 
