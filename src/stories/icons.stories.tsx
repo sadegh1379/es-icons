@@ -189,7 +189,9 @@ import {
   PlayFill,
   ShieldStarFill,
   ServiceInvestmentSpecialInvestmentPlans,
-  ImageSolid
+  ImageSolid,
+  EmptySearchLight,
+  EmptySearchDark
 } from '../index';
 
 const meta: Meta = {
@@ -197,10 +199,10 @@ const meta: Meta = {
   parameters: {
     layout: 'fullscreen',
     actions: {
-      disable: true,
+      disable: true
     },
     controls: {
-      disable: true,
+      disable: true
     },
     docs: {
       story: {
@@ -222,6 +224,32 @@ const IconShowcase = () => {
     { name: 'Ai', component: Ai },
     { name: 'AndroidBold', component: AndroidBold },
     { name: 'Arrow', component: Arrow },
+    { name: 'ArrowCircleUpFill', component: ArrowCircleUpFill },
+    { name: 'ArrowCircleLeftFill', component: ArrowCircleLeftFill },
+    { name: 'ArrowCircleRightFill', component: ArrowCircleRightFill },
+    { name: 'ArrowCircleDownFill', component: ArrowCircleDownFill },
+    { name: 'TransferCircleFill', component: TransferCircleFill },
+    { name: 'ExportSolid', component: ExportSolid },
+    { name: 'InfoCircleSolid', component: InfoCircleSolid },
+    { name: 'HistorySolid', component: HistorySolid },
+    { name: 'ReloadSolid', component: ReloadSolid },
+    { name: 'GoldSilverFillColored', component: GoldSilverFillColored },
+    { name: 'BarChartTrendSolid', component: BarChartTrendSolid },
+    { name: 'DocumentTimeSolid', component: DocumentTimeSolid },
+    { name: 'ShieldCheckSolid', component: ShieldCheckSolid },
+    { name: 'CheckCircleSolid', component: CheckCircleSolid },
+    { name: 'WalletFill', component: WalletFill },
+    { name: 'Warning', component: Warning },
+    { name: 'SendSolid', component: SendSolid },
+    { name: 'CameraFillColored', component: CameraFillColored },
+    { name: 'CheckCircleFillColored', component: CheckCircleFillColored },
+    { name: 'CloseCircleFillColored', component: CloseCircleFillColored },
+    { name: 'MicrophoneFillColored', component: MicrophoneFillColored },
+    { name: 'PlayFill', component: PlayFill },
+    { name: 'ShieldStarFill', component: ShieldStarFill },
+    { name: 'ImageSolid', component: ImageSolid },
+    { name: 'EmptySearchLight', component: EmptySearchLight },
+    { name: 'EmptySearchDark', component: EmptySearchDark },
     { name: 'ArrowCircleDown', component: ArrowCircleDown },
     { name: 'ArrowCircleUp', component: ArrowCircleUp },
     { name: 'ArrowTiny', component: ArrowTiny },
@@ -369,7 +397,10 @@ const IconShowcase = () => {
     },
     { name: 'ServiceVehicleBikeLicenseStatus', component: ServiceVehicleBikeLicenseStatus },
     { name: 'ServiceVehicleBikePlateHistory', component: ServiceVehicleBikePlateHistory },
-    { name: 'ServiceInvestmentSpecialInvestmentPlans', component: ServiceInvestmentSpecialInvestmentPlans },
+    {
+      name: 'ServiceInvestmentSpecialInvestmentPlans',
+      component: ServiceInvestmentSpecialInvestmentPlans
+    },
     {
       name: 'ServiceVehicleBikeTechnicalInspection',
       component: ServiceVehicleBikeTechnicalInspection
@@ -417,30 +448,7 @@ const IconShowcase = () => {
     { name: 'Video', component: Video },
     { name: 'Wallet', component: Wallet },
     { name: 'WalletDark', component: WalletDark },
-    { name: 'WalletFill', component: WalletFill },
-    { name: 'Warning', component: Warning },
-    { name: 'SendSolid', component: SendSolid },
-    {name: 'ArrowCircleUpFill', component: ArrowCircleUpFill},
-    {name: 'ArrowCircleLeftFill', component: ArrowCircleLeftFill},
-    {name: 'ArrowCircleRightFill', component: ArrowCircleRightFill},
-    {name: 'ArrowCircleDownFill', component: ArrowCircleDownFill},
-    {name: 'TransferCircleFill', component: TransferCircleFill},
-    {name: 'ExportSolid', component: ExportSolid},
-    {name: "InfoCircleSolid", component: InfoCircleSolid},
-    {name: "HistorySolid", component: HistorySolid},
-    {name: "ReloadSolid", component: ReloadSolid},
-    {name: "GoldSilverFillColored", component: GoldSilverFillColored},
-    {name: "BarChartTrendSolid", component: BarChartTrendSolid},
-    {name: "DocumentTimeSolid", component: DocumentTimeSolid},
-    {name: "ShieldCheckSolid", component: ShieldCheckSolid},
-    {name: "CheckCircleSolid", component: CheckCircleSolid},
-    {name: "CameraFillColored", component: CameraFillColored},
-    {name: "CheckCircleFillColored", component: CheckCircleFillColored},
-    {name: "CloseCircleFillColored", component: CloseCircleFillColored},
-    {name: "MicrophoneFillColored", component: MicrophoneFillColored},
-    {name: "PlayFill", component: PlayFill},
-    {name: "ShieldStarFill", component: ShieldStarFill},
-    {name: "ImageSolid", component: ImageSolid}
+    
     
   ];
 
