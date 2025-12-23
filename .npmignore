@@ -8,3 +8,4 @@ tsconfig.json
 .prettierrc.json
 release.js
 vercel.json
+script
