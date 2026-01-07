@@ -191,7 +191,8 @@ import {
   ServiceInvestmentSpecialInvestmentPlans,
   ImageSolid,
   EmptySearchLight,
-  EmptySearchDark
+  EmptySearchDark,
+  MobileSolid
 } from '../index';
 
 const meta: Meta = {
@@ -223,6 +224,7 @@ const IconShowcase = () => {
   const icons = [
     { name: 'Ai', component: Ai },
     { name: 'AndroidBold', component: AndroidBold },
+    { name: 'MobileSolid', component: MobileSolid },
     { name: 'Arrow', component: Arrow },
     { name: 'ArrowCircleUpFill', component: ArrowCircleUpFill },
     { name: 'ArrowCircleLeftFill', component: ArrowCircleLeftFill },

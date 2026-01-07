@@ -1,7 +1,6 @@
 import type { SVGProps } from 'react';
 
 const SvgPlusFill = (props: SVGProps<SVGSVGElement>) => {
-  console.log("loaded SvgPlusFill.")
   return(
   <svg
     xmlns="http://www.w3.org/2000/svg"

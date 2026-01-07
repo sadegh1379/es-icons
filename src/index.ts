@@ -189,6 +189,7 @@ export { default as ServiceInvestmentSpecialInvestmentPlans } from './icons/Serv
 export { default as ImageSolid } from './icons/image-solid'
 export { default as EmptySearchLight } from './icons/empty-search-light';
 export { default as EmptySearchDark } from './icons/empty-search-dark';
+export { default as MobileSolid } from './icons/mobile-solid';
 
 
 

@@ -1,7 +1,6 @@
 import type { SVGProps } from 'react';
 
 const SvgMinus = (props: SVGProps<SVGSVGElement>) => {
-  console.log("loaded SvgMinus.")
 
   return(
   <svg
