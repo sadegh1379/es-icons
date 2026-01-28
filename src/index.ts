@@ -158,7 +158,6 @@ export { default as TrustWallet } from './icons/trust-wallet';
 export { default as TwoFa } from './icons/two-fa';
 export { default as Unlock } from './icons/unlock';
 export { default as Upload } from './icons/upload';
-export { default as User } from './icons/user';
 export { default as Video } from './icons/video';
 export { default as WalletDark } from './icons/wallet-dark';
 export { default as WalletFill } from './icons/wallet-fill';
@@ -190,6 +189,9 @@ export { default as ImageSolid } from './icons/image-solid'
 export { default as EmptySearchLight } from './icons/empty-search-light';
 export { default as EmptySearchDark } from './icons/empty-search-dark';
 export { default as MobileSolid } from './icons/mobile-solid';
+export { default as UserFill } from './icons/user-fill';
+export { default as ServicesFill } from './icons/services-fill';
+
 
 
 

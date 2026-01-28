@@ -166,7 +166,6 @@ import {
   TwoFa,
   Unlock,
   Upload,
-  User,
   Video,
   Wallet,
   WalletDark,
@@ -192,7 +191,9 @@ import {
   ImageSolid,
   EmptySearchLight,
   EmptySearchDark,
-  MobileSolid
+  MobileSolid,
+  UserFill,
+  ServicesFill
 } from '../index';
 
 const meta: Meta = {
@@ -446,10 +447,11 @@ const IconShowcase = () => {
     { name: 'TwoFa', component: TwoFa },
     { name: 'Unlock', component: Unlock },
     { name: 'Upload', component: Upload },
-    { name: 'User', component: User },
     { name: 'Video', component: Video },
     { name: 'Wallet', component: Wallet },
     { name: 'WalletDark', component: WalletDark },
+    { name: 'UserFill', component: UserFill },
+    { name: 'ServicesFill', component: ServicesFill },
     
     
   ];
