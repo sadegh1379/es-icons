@@ -39,7 +39,6 @@ export { default as EskenasIcon } from './icons/eskenas-icon';
 export { default as Eskenas } from './icons/eskenas';
 export { default as Exit } from './icons/exit';
 export { default as Eye } from './icons/eye';
-export { default as FilledBarChart } from './icons/filled-bar-chart';
 export { default as Filter } from './icons/filter';
 export { default as FourDots } from './icons/four-dots';
 export { default as FullScreen } from './icons/full-screen';
@@ -191,6 +190,7 @@ export { default as EmptySearchDark } from './icons/empty-search-dark';
 export { default as MobileSolid } from './icons/mobile-solid';
 export { default as UserFill } from './icons/user-fill';
 export { default as ServicesFill } from './icons/services-fill';
+export { default as BarChartFill } from './icons/bar-chart-fill';
 
 
 

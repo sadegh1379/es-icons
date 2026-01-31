@@ -46,7 +46,6 @@ import {
   EskenasIcon,
   Exit,
   Eye,
-  FilledBarChart,
   Filter,
   FourDots,
   FullScreen,
@@ -193,7 +192,8 @@ import {
   EmptySearchDark,
   MobileSolid,
   UserFill,
-  ServicesFill
+  ServicesFill,
+  BarChartFill
 } from '../index';
 
 const meta: Meta = {
@@ -291,7 +291,6 @@ const IconShowcase = () => {
     { name: 'EskenasIcon', component: EskenasIcon },
     { name: 'Exit', component: Exit },
     { name: 'Eye', component: Eye },
-    { name: 'FilledBarChart', component: FilledBarChart },
     { name: 'Filter', component: Filter },
     { name: 'FourDots', component: FourDots },
     { name: 'FullScreen', component: FullScreen },
@@ -452,8 +451,7 @@ const IconShowcase = () => {
     { name: 'WalletDark', component: WalletDark },
     { name: 'UserFill', component: UserFill },
     { name: 'ServicesFill', component: ServicesFill },
-    
-    
+    { name: 'BarChartFill', component: BarChartFill },
   ];
 
   const filteredIcons = icons.filter(icon =>
