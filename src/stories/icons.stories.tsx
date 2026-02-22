@@ -193,7 +193,8 @@ import {
   MobileSolid,
   UserFill,
   ServicesFill,
-  BarChartFill
+  BarChartFill,
+  MoneyTransferFill
 } from '../index';
 
 const meta: Meta = {
@@ -452,6 +453,7 @@ const IconShowcase = () => {
     { name: 'UserFill', component: UserFill },
     { name: 'ServicesFill', component: ServicesFill },
     { name: 'BarChartFill', component: BarChartFill },
+    { name: 'MoneyTransferFill', component: MoneyTransferFill }
   ];
 
   const filteredIcons = icons.filter(icon =>

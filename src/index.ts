@@ -191,6 +191,7 @@ export { default as MobileSolid } from './icons/mobile-solid';
 export { default as UserFill } from './icons/user-fill';
 export { default as ServicesFill } from './icons/services-fill';
 export { default as BarChartFill } from './icons/bar-chart-fill';
+export { default as MoneyTransferFill } from './icons/money-transfer-fill';
 
 
 
