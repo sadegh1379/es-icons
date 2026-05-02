@@ -192,6 +192,8 @@ export { default as UserFill } from './icons/user-fill';
 export { default as ServicesFill } from './icons/services-fill';
 export { default as BarChartFill } from './icons/bar-chart-fill';
 export { default as MoneyTransferFill } from './icons/money-transfer-fill';
+export { default as BtcFill } from './icons/btc-fill';
+export { default as CoinGroupFill } from './icons/coin-group-fill';
 
 
 

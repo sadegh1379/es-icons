@@ -194,7 +194,9 @@ import {
   UserFill,
   ServicesFill,
   BarChartFill,
-  MoneyTransferFill
+  MoneyTransferFill,
+  BtcFill,
+  CoinGroupFill
 } from '../index';
 
 const meta: Meta = {
@@ -453,7 +455,10 @@ const IconShowcase = () => {
     { name: 'UserFill', component: UserFill },
     { name: 'ServicesFill', component: ServicesFill },
     { name: 'BarChartFill', component: BarChartFill },
-    { name: 'MoneyTransferFill', component: MoneyTransferFill }
+    { name: 'MoneyTransferFill', component: MoneyTransferFill },
+    { name: 'BtcFill', component: BtcFill },
+    { name: 'CoinGroupFill', component: CoinGroupFill },
+
   ];
 
   const filteredIcons = icons.filter(icon =>
