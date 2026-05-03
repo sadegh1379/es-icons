@@ -196,7 +196,9 @@ import {
   BarChartFill,
   MoneyTransferFill,
   BtcFill,
-  CoinGroupFill
+  CoinGroupFill,
+  PropertyFill,
+  WorldFill
 } from '../index';
 
 const meta: Meta = {
@@ -458,6 +460,8 @@ const IconShowcase = () => {
     { name: 'MoneyTransferFill', component: MoneyTransferFill },
     { name: 'BtcFill', component: BtcFill },
     { name: 'CoinGroupFill', component: CoinGroupFill },
+    { name: 'PropertyFill', component: PropertyFill },
+    { name: 'WorldFill', component: WorldFill },
 
   ];
 
