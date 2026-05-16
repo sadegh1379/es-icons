@@ -196,6 +196,7 @@ export { default as BtcFill } from './icons/btc-fill';
 export { default as CoinGroupFill } from './icons/coin-group-fill';
 export { default as PropertyFill } from './icons/property-fill';
 export { default as WorldFill } from './icons/world-fill';
+export { default as PhoneCallingFill } from './icons/phone-calling-fill';
 
 
 

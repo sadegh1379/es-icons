@@ -198,7 +198,8 @@ import {
   BtcFill,
   CoinGroupFill,
   PropertyFill,
-  WorldFill
+  WorldFill,
+  PhoneCallingFill
 } from '../index';
 
 const meta: Meta = {
@@ -462,6 +463,7 @@ const IconShowcase = () => {
     { name: 'CoinGroupFill', component: CoinGroupFill },
     { name: 'PropertyFill', component: PropertyFill },
     { name: 'WorldFill', component: WorldFill },
+    { name: 'PhoneCallingFill', component: PhoneCallingFill },
 
   ];
 
