@@ -109,6 +109,7 @@ import {
   MobileOutline,
   MoneyTransferFill,
   MoonFillColored,
+  MoonOutline,
   MyPhoneFillColored,
   NationalCardFillColored,
   NavArrowFillColored,
@@ -161,6 +162,7 @@ import {
   StarFillColored,
   StuckFundFill,
   SunFillColored,
+  SunOutline,
   SupportFill,
   TechnicalInspectionFill,
   TelegramFillColored,
@@ -412,6 +414,8 @@ const IconShowcase = () => {
     { name: 'WorldFill', component: WorldFill },
     { name: 'SupportFill', component: SupportFill },
     { name: 'ProfileCircleOutline', component: ProfileCircleOutline },
+    { name: 'SunOutline', component: SunOutline },
+    { name: 'MoonOutline', component: MoonOutline },
   ];
 
   const filteredIcons = icons.filter(icon =>

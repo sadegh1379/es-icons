@@ -189,3 +189,5 @@ export { default as WaterFillColored } from './icons/water-fill-colored';
 export { default as WorldFill } from './icons/world-fill';
 export { default as SupportFill } from './icons/support-fill';
 export { default as ProfileCircleOutline } from './icons/profile-circle-outline';
+export { default as MoonOutline } from './icons/moon-outline';
+export { default as SunOutline } from './icons/sun-outline';
