@@ -218,8 +218,11 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+type IconFilter = 'all' | 'outline' | 'fill' | 'colored';
+
 const IconShowcase = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [activeFilter, setActiveFilter] = useState<IconFilter>('all');
   const [copiedIcon, setCopiedIcon] = useState('');
 
   const icons = [
@@ -418,9 +421,32 @@ const IconShowcase = () => {
     { name: 'MoonOutline', component: MoonOutline },
   ];
 
-  const filteredIcons = icons.filter(icon =>
-    icon.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const isColoredIcon = (name: string) =>
+    name.includes('Colored') || name.includes('ColorStatus');
+
+  const getIconType = (name: string): Exclude<IconFilter, 'all'> => {
+    if (isColoredIcon(name)) return 'colored';
+    if (name.includes('Outline')) return 'outline';
+    return 'fill';
+  };
+
+  const filteredIcons = icons
+    .filter(icon => {
+      const matchesSearch = icon.name.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesFilter = activeFilter === 'all' || getIconType(icon.name) === activeFilter;
+      return matchesSearch && matchesFilter;
+    })
+    .sort((a, b) => {
+      if (activeFilter !== 'all') return 0;
+      return Number(isColoredIcon(a.name)) - Number(isColoredIcon(b.name));
+    });
+
+  const filters: { id: IconFilter; label: string }[] = [
+    { id: 'all', label: 'All' },
+    { id: 'outline', label: 'Outline' },
+    { id: 'fill', label: 'Fill' },
+    { id: 'colored', label: 'Colored' }
+  ];
 
   const copyIconName = async (iconName: string) => {
     try {
@@ -428,12 +454,11 @@ const IconShowcase = () => {
       setCopiedIcon(iconName);
       setTimeout(() => {
         setCopiedIcon('');
-        // Reset any active border styling after copy animation
         const elements = document.querySelectorAll('[data-icon-card]');
         elements.forEach(el => {
           const element = el as HTMLElement;
-          if (element.style.borderColor === 'rgb(102, 126, 234)') {
-            element.style.borderColor = '#e2e8f0';
+          if (element.style.borderColor === 'rgb(255, 255, 255)') {
+            element.style.borderColor = '#2a2a2a';
             element.style.transform = 'scale(1)';
             element.style.boxShadow = 'none';
           }
@@ -448,41 +473,69 @@ const IconShowcase = () => {
     <div
       style={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        padding: '40px 20px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        background: '#000000',
+        padding: '48px 32px',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        color: '#ffffff'
       }}
     >
       <div
         style={{
           maxWidth: '1200px',
-          margin: '0 auto',
-          background: 'white',
-          borderRadius: '24px',
-          padding: '40px',
-          boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-          backdropFilter: 'blur(10px)'
+          margin: '0 auto'
         }}
       >
+        {/* Header */}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            paddingBottom: '24px',
+            borderBottom: '1px solid #2a2a2a',
+            marginBottom: '48px'
+          }}
+        >
+          <span
+            style={{
+              fontSize: '0.75rem',
+              fontWeight: 500,
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              color: '#ffffff'
+            }}
+          >
+            ES Icons
+          </span>
+          <span
+            style={{
+              fontSize: '0.75rem',
+              color: '#a0a0a0'
+            }}
+          >
+            {filteredIcons.length} icons
+          </span>
+        </div>
+
         {/* Search Bar */}
         <div
           style={{
             position: 'relative',
-            maxWidth: '500px',
-            margin: '0 auto 50px auto'
+            maxWidth: '480px',
+            marginBottom: '24px'
           }}
         >
           <div
             style={{
               position: 'absolute',
-              left: '20px',
+              left: '16px',
               top: '50%',
               transform: 'translateY(-50%)',
-              color: '#9ca3af',
+              color: '#a0a0a0',
               zIndex: 1
             }}
           >
-            <MagnifierOutline style={{ width: '20px', height: '20px' }} />
+            <MagnifierOutline style={{ width: '18px', height: '18px' }} />
           </div>
           <input
             type="text"
@@ -491,35 +544,66 @@ const IconShowcase = () => {
             onChange={e => setSearchTerm(e.target.value)}
             style={{
               width: '100%',
-              padding: '16px 20px 16px 55px',
-              fontSize: '16px',
-              border: '2px solid #e5e7eb',
-              borderRadius: '16px',
+              padding: '12px 16px 12px 44px',
+              fontSize: '0.875rem',
+              border: '1px solid #2a2a2a',
+              borderRadius: '8px',
               outline: 'none',
-              transition: 'all 0.3s ease',
-              background: '#f9fafb',
+              transition: 'border-color 0.2s ease',
+              background: '#111111',
+              color: '#ffffff',
               boxSizing: 'border-box'
             }}
             onFocus={e => {
-              e.target.style.borderColor = '#667eea';
-              e.target.style.background = 'white';
-              e.target.style.boxShadow = '0 0 0 4px rgba(102, 126, 234, 0.1)';
+              e.target.style.borderColor = '#444444';
             }}
             onBlur={e => {
-              e.target.style.borderColor = '#e5e7eb';
-              e.target.style.background = '#f9fafb';
-              e.target.style.boxShadow = 'none';
+              e.target.style.borderColor = '#2a2a2a';
             }}
           />
+        </div>
+
+        {/* Filters */}
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '8px',
+            marginBottom: '48px'
+          }}
+        >
+          {filters.map(filter => {
+            const isActive = activeFilter === filter.id;
+            return (
+              <button
+                key={filter.id}
+                type="button"
+                onClick={() => setActiveFilter(filter.id)}
+                style={{
+                  padding: '6px 14px',
+                  fontSize: '0.75rem',
+                  fontWeight: 500,
+                  border: `1px solid ${isActive ? '#ffffff' : '#2a2a2a'}`,
+                  borderRadius: '999px',
+                  background: isActive ? '#ffffff' : '#111111',
+                  color: isActive ? '#000000' : '#a0a0a0',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease'
+                }}
+              >
+                {filter.label}
+              </button>
+            );
+          })}
         </div>
 
         {/* Icons Grid */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '20px',
-            marginBottom: '40px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+            gap: '12px',
+            marginBottom: '48px'
           }}
         >
           {filteredIcons.map((icon, index) => {
@@ -531,83 +615,72 @@ const IconShowcase = () => {
                 data-icon-card
                 onClick={() => copyIconName(icon.name)}
                 style={{
-                  background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',
-                  border: `1px solid #e2e8f0`,
-                  borderRadius: '20px',
-                  padding: '28px 20px 32px 20px',
+                  background: '#111111',
+                  border: `1px solid ${isRecentlyCopied ? '#ffffff' : '#2a2a2a'}`,
+                  borderRadius: '12px',
+                  padding: '24px 16px',
                   textAlign: 'center',
-                  transition: 'all 0.3s ease',
+                  transition: 'border-color 0.2s ease, background 0.2s ease',
                   cursor: 'pointer',
                   position: 'relative',
-                  overflow: 'hidden',
                   transform: isRecentlyCopied ? 'scale(1.02)' : 'scale(1)'
                 }}
                 onMouseEnter={e => {
                   if (!isRecentlyCopied) {
-                    e.currentTarget.style.transform = 'translateY(-8px)';
-                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.12)';
-                    e.currentTarget.style.borderColor = '#667eea';
+                    e.currentTarget.style.borderColor = '#444444';
+                    e.currentTarget.style.background = '#1a1a1a';
                   }
                 }}
                 onMouseLeave={e => {
                   if (!isRecentlyCopied) {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = 'none';
-                    e.currentTarget.style.borderColor = '#e2e8f0';
+                    e.currentTarget.style.borderColor = '#2a2a2a';
+                    e.currentTarget.style.background = '#111111';
                   }
                 }}
               >
-                {/* Copy Success Indicator */}
                 {isRecentlyCopied && (
                   <div
                     style={{
                       position: 'absolute',
-                      top: '10px',
-                      right: '10px',
-                      background: 'rgba(255,255,255,0.9)',
-                      borderRadius: '12px',
-                      padding: '4px 8px',
-                      fontSize: '0.75rem',
-                      fontWeight: '600',
-                      color: '#059669',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '4px'
+                      top: '8px',
+                      right: '8px',
+                      background: '#2a2a2a',
+                      borderRadius: '6px',
+                      padding: '2px 8px',
+                      fontSize: '0.7rem',
+                      fontWeight: 500,
+                      color: '#a0a0a0'
                     }}
                   >
-                    ✓ copied
+                    copied
                   </div>
                 )}
 
-                {/* Icon */}
                 <div
                   style={{
-                    width: '50px',
-                    height: '50px',
-                    margin: '0 auto 20px auto',
+                    width: '48px',
+                    height: '48px',
+                    margin: '0 auto 16px auto',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                    borderRadius: '10px',
-                    color: 'white',
-                    boxShadow: '0 8px 25px rgba(102, 126, 234, 0.3)'
+                    background: '#2a2a2a',
+                    borderRadius: '8px',
+                    color: '#ffffff'
                   }}
                 >
-                  <IconComponent style={{ width: '30px', height: '30px' }} />
+                  <IconComponent style={{ width: '28px', height: '28px' }} />
                 </div>
 
-                {/* Icon Name */}
                 <h3
                   style={{
-                    fontSize: '1rem',
-                    fontWeight: '600',
-                    color: '#1f2937',
-                    margin: '0',
+                    fontSize: '0.8rem',
+                    fontWeight: 500,
+                    color: '#a0a0a0',
+                    margin: 0,
                     wordBreak: 'break-word',
-                    hyphens: 'auto',
-                    lineHeight: '1.3',
-                    minHeight: '2.6rem',
+                    lineHeight: 1.4,
+                    minHeight: '2.2rem',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -627,31 +700,34 @@ const IconShowcase = () => {
             style={{
               textAlign: 'center',
               padding: '60px 20px',
-              color: '#6b7280'
+              color: '#a0a0a0'
             }}
           >
             <div
               style={{
-                fontSize: '4rem',
-                marginBottom: '20px',
-                opacity: '0.5'
+                marginBottom: '16px',
+                opacity: 0.5,
+                display: 'flex',
+                justifyContent: 'center'
               }}
             >
-              🔍
+              <MagnifierOutline style={{ width: '48px', height: '48px' }} />
             </div>
             <h3
               style={{
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                margin: '0 0 8px 0'
+                fontSize: '1.125rem',
+                fontWeight: 600,
+                margin: '0 0 8px 0',
+                color: '#ffffff'
               }}
             >
               No icons found
             </h3>
             <p
               style={{
-                fontSize: '1rem',
-                margin: 0
+                fontSize: '0.875rem',
+                margin: 0,
+                color: '#a0a0a0'
               }}
             >
               Try adjusting your search term
@@ -659,18 +735,18 @@ const IconShowcase = () => {
           </div>
         )}
 
-        {/* Footer */}
         <div
           style={{
             textAlign: 'center',
-            paddingTop: '40px',
-            borderTop: '1px solid #e5e7eb',
-            color: '#6b7280',
-            fontSize: '0.9rem'
+            paddingTop: '32px',
+            borderTop: '1px solid #2a2a2a',
+            color: '#a0a0a0',
+            fontSize: '0.75rem',
+            letterSpacing: '0.05em'
           }}
         >
           <p style={{ margin: 0 }}>
-            ✨ Showcasing {icons.length} beautiful icons from Skenas Icons collection
+            {icons.length} icons · Skenas Icons collection
           </p>
         </div>
       </div>

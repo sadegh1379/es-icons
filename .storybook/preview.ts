@@ -4,6 +4,10 @@ const preview: Preview = {
   // tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
+    backgrounds: {
+      default: 'dark',
+      values: [{ name: 'dark', value: '#000000' }]
+    },
     options: {
       bottomPanelHeight: 0
     },
