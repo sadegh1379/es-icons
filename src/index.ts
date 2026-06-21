@@ -187,3 +187,5 @@ export { default as WalletOutline } from './icons/wallet-outline';
 export { default as WarningFill } from './icons/warning-fill';
 export { default as WaterFillColored } from './icons/water-fill-colored';
 export { default as WorldFill } from './icons/world-fill';
+export { default as SupportFill } from './icons/support-fill';
+export { default as ProfileCircleOutline } from './icons/profile-circle-outline';

@@ -126,6 +126,7 @@ import {
   PlusLargeOutline,
   PlusOutline,
   PracticalCategoryFill,
+  ProfileCircleOutline,
   PromissoryFillColored,
   PropertyFill,
   PropertyInquiryFill,
@@ -160,6 +161,7 @@ import {
   StarFillColored,
   StuckFundFill,
   SunFillColored,
+  SupportFill,
   TechnicalInspectionFill,
   TelegramFillColored,
   ThirdPartyInsuranceInquiryFill,
@@ -408,6 +410,8 @@ const IconShowcase = () => {
     { name: 'WarningFill', component: WarningFill },
     { name: 'WaterFillColored', component: WaterFillColored },
     { name: 'WorldFill', component: WorldFill },
+    { name: 'SupportFill', component: SupportFill },
+    { name: 'ProfileCircleOutline', component: ProfileCircleOutline },
   ];
 
   const filteredIcons = icons.filter(icon =>
