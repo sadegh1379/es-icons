@@ -754,6 +754,7 @@ const IconShowcase = () => {
   );
 };
 
-export const SkenasIconGallery: Story = {
+export const IconGallery: Story = {
+  name: 'Icon Gallery',
   render: () => <IconShowcase />
 };
