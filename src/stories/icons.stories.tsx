@@ -50,6 +50,7 @@ import {
   CloseCircleFillColored,
   CloseCircleOutline,
   CoinGroupFill,
+  CoinStackOutline,
   CopyOutline,
   CreditFill,
   CrowdfundingFillColored,
@@ -87,6 +88,7 @@ import {
   HistoryOutline,
   HomeFill,
   ImageOutline,
+  IncomeFill,
   InfoCircleOutline,
   InfoFill,
   InquiryFillColored,
@@ -181,6 +183,8 @@ import {
   UnlockOutline,
   UploadFill,
   UserFill,
+  UsersFill,
+  UsersOutline,
   VehicleBikeFill,
   VehicleDocumentsFill,
   VehicleFill,
@@ -226,6 +230,10 @@ const IconShowcase = () => {
   const [copiedIcon, setCopiedIcon] = useState('');
 
   const icons = [
+    { name: 'UsersFill', component: UsersFill },
+    { name: 'UsersOutline', component: UsersOutline },
+    { name: 'CoinStackOutline', component: CoinStackOutline },
+    { name: 'IncomeFill', component: IncomeFill },
     { name: 'ActiveLicensePlatesFill', component: ActiveLicensePlatesFill },
     { name: 'AiFill', component: AiFill },
     { name: 'AndroidFill', component: AndroidFill },

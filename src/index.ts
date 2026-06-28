@@ -1,3 +1,8 @@
+
+export { default as UsersOutline } from './icons/users-outline';
+export { default as UsersFill } from './icons/users-fill';
+export { default as CoinStackOutline } from './icons/coin-stack-outline';
+export { default as IncomeFill } from './icons/income-fill';
 export { default as ActiveLicensePlatesFill } from './icons/active-license-plates-fill';
 export { default as AiFill } from './icons/ai-fill';
 export { default as AndroidFill } from './icons/android-fill';
